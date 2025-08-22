@@ -3,7 +3,7 @@ package Bank;
 import java.util.Scanner;
 import java.util.StringTokenizer;
 
-public abstract class HomeLoan{
+public abstract class HomeLoan implements Loan{
      private String granterName;
      private int granterAge;
      private long adharNumber;
