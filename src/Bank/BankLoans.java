@@ -20,28 +20,18 @@ public class BankLoans extends HomeLoan implements Loan{
     private String parentBankBranch;
     private long parentAcoountnumberNumber;
     private String LastQualification;
-    public BankLoans(String granterName, int granterAge, long adharNumber, long phoneNumber, String bankName, String ifcCode, String granterAccounNumber) {
+
+
+    private  String gstNumber;
+    private String shopActNumber;
+    private long udyamAdhaar;
+
+
+    public BankLoans(String granterName, int granterAge, long adharNumber, long phoneNumber,
+                     String bankName, String ifcCode, String granterAccounNumber) {
         super(granterName, granterAge, adharNumber, phoneNumber, bankName, ifcCode, granterAccounNumber);
     }
-    public BankLoans(double marksOfSecondayExam,double marksOfHighSecondayExam,double marksOfEntrance,String collageName,long feesOfCollage,long estimateExpance,long anualIncome,
-                     String parentname,long parentPhoneNumber,int parentAge,String parentBankName,String parentBankBranch,long parentAcoountnumberNumber,String lastQualification){
-        this.marksOfSecondayExam=marksOfSecondayExam;
-        this.marksOfHighSecondayExam=marksOfHighSecondayExam;
-        this.marksOfEntrance=marksOfEntrance;
-        this.feesOfCollage=feesOfCollage;
-        this.estimateExpance=estimateExpance;
-        this.anualIncome=anualIncome;
-        this.parentname=parentname;
-        this.parentAge=parentAge;
-        this.parentBankName=parentBankName;
-        this.parentBankBranch=parentBankBranch;
-        this.parentAcoountnumberNumber=parentAcoountnumberNumber;
-        this.parentPhoneNumber=parentPhoneNumber;
-        this.LastQualification=lastQualification;
-        this.collageName=collageName;
-    }
-
-    public BankLoans(double marksOfSecondayExam,double marksOfHighSecondayExam,double marksOfEntrance,String collageName,long feesOfCollage,long estimateExpance,long anualIncome,
+    public BankLoans(String lastQualification,double marksOfSecondayExam,double marksOfHighSecondayExam,double marksOfEntrance,String collageName,long feesOfCollage,long estimateExpance,long anualIncome,
                      String parentname,long parentPhoneNumber,int parentAge,String parentBankName,String parentBankBranch,long parentAcoountnumberNumber,double graduationMarks){
         this.marksOfSecondayExam=marksOfSecondayExam;
         this.marksOfHighSecondayExam=marksOfHighSecondayExam;
@@ -57,6 +47,15 @@ public class BankLoans extends HomeLoan implements Loan{
         this.parentPhoneNumber=parentPhoneNumber;
         this.graduationMarks=graduationMarks;
         this.collageName=collageName;
+        this.LastQualification=lastQualification;
+    }
+    public BankLoans(String gstNumber,String shopActNumber,long udyamAdhaar){
+        this.gstNumber=gstNumber;
+        this.shopActNumber=shopActNumber;
+        this.udyamAdhaar=udyamAdhaar;
+    }
+    public BankLoans(){
+
     }
 
     public   void ApplicantDetails(){
@@ -115,26 +114,26 @@ public class BankLoans extends HomeLoan implements Loan{
         System.out.println("Parent (Father Or Mother) Name: "+parentname);
         System.out.println("Parent Age: "+parentAge);
         System.out.println("Parent Phone number: "+parentPhoneNumber);
+        System.out.println("-----------Parent Bank Details-------");
+        System.out.println("BankName: "+parentBankName);
+        System.out.println("Bank Branch: "+parentBankBranch);
+        System.out.println("Bank Account Number: "+parentAcoountnumberNumber);
         System.out.println("_____________loan Details_______________");
         System.out.println("-------------Applicant Bank Details-------");
         System.out.println("Applicant Name: "+accountFunctionality.getAccountHolderName());
         System.out.println("Applicant AccountNumber: "+accountFunctionality.getAccountNumber());
+        System.out.println("Loan Amount: "+bankFunctionality.getLoanAmount());
     }
 
     @Override
     public void Business() {
         ApplicantDetails();
-
-
-    }
-
-    @Override
-    public void GoldLoan() {
-
-    }
-
-    @Override
-    public void CreditCardLoan() {
-
+        System.out.println("--------Business Proof------");
+        System.out.println("GST Registration Number: "+gstNumber);
+        System.out.println("Shop ACT Licence: "+shopActNumber);
+        System.out.println("Udyam Aadhaar: "+udyamAdhaar);
+        System.out.println("Applicant Name: "+accountFunctionality.getAccountHolderName());
+        System.out.println("Applicant AccountNumber: "+accountFunctionality.getAccountNumber());
+        System.out.println("Loan Amount: "+bankFunctionality.getLoanAmount());
     }
 }

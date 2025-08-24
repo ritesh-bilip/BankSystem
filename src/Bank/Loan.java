@@ -5,6 +5,4 @@ public interface Loan {
     void PersonalLoan();
     void Education();
     void Business();
-    void GoldLoan();
-    void CreditCardLoan();
 }
