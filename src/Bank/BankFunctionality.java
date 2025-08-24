@@ -29,7 +29,7 @@ public  class BankFunctionality extends BankAccount {
         long phoneNumber;
         String bankName;
         String ifcCode;
-        String granterAccounNumber;
+        String granterAccountNumber;
         System.out.println("Enter Your Account Number: ");
         long accountNumber=sc.nextLong();
         if (accountNumber==getAccountNumber()) {
@@ -48,8 +48,8 @@ public  class BankFunctionality extends BankAccount {
             System.out.println("Enter IFC Code: ");
             ifcCode = sc.nextLine();
             System.out.println("Enter AccountNumber: ");
-            granterAccounNumber = sc.nextLine();
-            BankLoans bankLoans = new BankLoans(granterName, granterAge, adharNumber, phoneNumber, bankName, ifcCode, granterAccounNumber);
+            granterAccountNumber = sc.nextLine();
+            BankLoans bankLoans = new BankLoans(granterName, granterAge, adharNumber, phoneNumber, bankName, ifcCode, granterAccountNumber);
             System.out.println("Time preiod : 1. 10 years 2. 15 years 3. 20 years");
             int timePreiod = sc.nextInt();
             switch (timePreiod) {
