@@ -6,8 +6,8 @@ public  class BankFunctionality extends BankAccount {
     static Scanner sc=new Scanner(System.in);
     private  long loanAmount;
     public BankFunctionality(String accountHolderName, int age, long adharNumber,
-                             long phonenumber, int minimumDeposite,long loanAmount,long AccountNumber) {
-        super(accountHolderName, age, adharNumber, phonenumber, minimumDeposite,AccountNumber);
+                             long phonenumber, int minimumDeposite,long loanAmount,String AccountNumber) {
+        super(accountHolderName, age, adharNumber, phonenumber, minimumDeposite, AccountNumber);
         this.loanAmount=loanAmount;
     }
     public BankFunctionality(){
@@ -31,8 +31,8 @@ public  class BankFunctionality extends BankAccount {
         String ifcCode;
         String granterAccountNumber;
         System.out.println("Enter Your Account Number: ");
-        long accountNumber=sc.nextLong();
-        if (accountNumber==getAccountNumber()) {
+        String accountNumber=sc.nextLine();
+        if (accountNumber.equals(getAccountNumber())) {
             System.out.println("-------Enter Garenter Details--------");
             System.out.println("Enter Granter Name: ");
             granterName = sc.nextLine();
@@ -74,8 +74,8 @@ public  class BankFunctionality extends BankAccount {
         System.out.println("Enter loan Amount: ");
         loanAmount= sc.nextLong();
         System.out.println("Enter your Account Number: ");
-        long accountnumber= sc.nextLong();
-        if(accountnumber==getAccountNumber()){
+        String accountnumber= sc.nextLine();
+        if(accountnumber.equals(getAccountNumber())){
             System.out.println("-----Enter Time period---");
             BankLoans bankLoans= new BankLoans();
             System.out.println("1. 10 years 2. 15 years 3. 20 years");
@@ -103,7 +103,7 @@ public  class BankFunctionality extends BankAccount {
         System.out.println("Enter Student loan  Amount:  ");
         loanAmount= sc.nextLong();
         System.out.println("Enter Your Account Number: ");
-        long accountNumber= sc.nextLong();
+        String accountNumber= sc.nextLine();
         double marksOfSecondayExam;
         double marksOfHighSecondayExam;
         double graduationMarks = 0;
@@ -119,7 +119,7 @@ public  class BankFunctionality extends BankAccount {
         String parentBankBranch;
         long parentAcoountnumberNumber;
         String LastQualification;
-        if (accountNumber==getAccountNumber()){
+        if (accountNumber.equals(getAccountNumber())){
             System.out.println("Enter Anunal income:  ");
             anualIncome= sc.nextLong();
             System.out.println("---Academic details---");
@@ -190,11 +190,11 @@ public  class BankFunctionality extends BankAccount {
         System.out.println("Enter Loan Amount: ");
         loanAmount= sc.nextLong();
         System.out.println("Enter Account Number: ");
-        long accountNumber= sc.nextLong();
+        String accountNumber= sc.nextLine();
         String gstNumber;
         String shopActNumber;
         long udyamAdhaar;
-        if (accountNumber==getAccountNumber()){
+        if (accountNumber.equals(getAccountNumber())){
             System.out.println("Enter GST Number: ");
             gstNumber= sc.nextLine();
             System.out.println("Enter Shop Act Number: ");
@@ -220,12 +220,9 @@ public  class BankFunctionality extends BankAccount {
                     break;
                 default:
                     System.out.println("Invalid ");
-
+                    break;
 
             }
         }
     }
-//    public void loan(long accountNumber ){
-//        System.out.println("Enter your AccountNumber: ");
-//    }
 }

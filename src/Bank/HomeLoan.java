@@ -109,19 +109,5 @@ public abstract class HomeLoan implements Loan{
         this.interestrateBusinessLoan = interestrateBusinessLoan;
     }
 
-    public double getInterestrateGoldLoan() {
-        return interestrateGoldLoan;
-    }
 
-    public double getInterestrateCreditcardLoan() {
-        return interestrateCreditcardLoan;
-    }
-
-    public void setInterestrateCreditcardLoan(double interestrateCreditcardLoan) {
-        this.interestrateCreditcardLoan = interestrateCreditcardLoan;
-    }
-
-    public void setInterestrateGoldLoan(double interestrateGoldLoan) {
-        this.interestrateGoldLoan = interestrateGoldLoan;
-    }
 }

@@ -5,32 +5,41 @@ import java.util.Scanner;
 public  class AccountFunctionality extends BankAccount {
     static Scanner sc=new Scanner(System.in);
     private int balance;
-    public AccountFunctionality(String accountHolderName, int age, long adharNumber, long phonenumber, int minimumDeposite,long AccountNumber) {
+    public AccountFunctionality(String accountHolderName, int age, long adharNumber, long phonenumber, int minimumDeposite,String AccountNumber) {
         super(accountHolderName, age, adharNumber, phonenumber, minimumDeposite,AccountNumber);
         this.balance=minimumDeposite;
     }
     public  AccountFunctionality(){
 
     }
+    public void showAccount(){
+        System.out.println("Name: "+getAccountHolderName());
+        System.out.println("Age: "+getAge());
+        System.out.println("Aadhaar number: "+getAdharNumber());
+        System.out.println("Phone Number: "+getPhonenumber());
+        System.out.println("Account Number: "+getPhonenumber());
+        System.out.println("Account Balance: "+getMinimumDeposite());
+    }
 
-    public  int Deposit(long accountNumber,int balance ){
+
+    public  void Deposit(){
         System.out.println("Enter your Account: ");
-        long check=sc.nextLong();
-        if (accountNumber==check){
+        String check=sc.nextLine();
+        if (getAccountNumber().equals(check)){
             System.out.println("Enter Deposit Amount: ");
             int deposit= sc.nextInt();
             balance=getMinimumDeposite()+deposit+balance;
+            System.out.println(getAccountHolderName()+", your cash amount "+deposit+"Deposit Successfully");
+            System.out.println("Current Balance: "+balance);
         }else {
             System.out.println("Invalid Bank Account  Number");
         }
-        return balance;
-
     }
 
     public  void Withdraw(){
         System.out.println("Enter your Account: ");
-        long check=sc.nextLong();
-        if (getAccountNumber()==check){
+        String check=sc.nextLine();
+        if (getAccountNumber().equals(check)){
             System.out.println("Enter withdraw Amount: ");
             int deposit= sc.nextInt();
             if (deposit>balance){
@@ -46,8 +55,8 @@ public  class AccountFunctionality extends BankAccount {
     }
     public void CheckBalance(){
         System.out.println("Enter your Account Number: ");
-        long check= sc.nextLong();
-        if(check==getAccountNumber()){
+        String check= sc.nextLine();
+        if(check.equals(getAccountNumber())){
             System.out.println(getAccountHolderName()+" , your  current balance : "+balance);
         }else {
             System.out.println("Invalid AccountNumber");
@@ -55,8 +64,8 @@ public  class AccountFunctionality extends BankAccount {
     }
     public void TransferMoney(){
         System.out.println("Enter your Account Number: ");
-        long check= sc.nextLong();
-        if (check==getAccountNumber()){
+        String check= sc.nextLine();
+        if (check.equals(getAccountNumber())){
             System.out.println("Enter Sender  Account Number: ");
             long check2= sc.nextLong();
             System.out.println("Enter Transfer Amount: ");
