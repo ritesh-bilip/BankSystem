@@ -17,7 +17,7 @@ public  class AccountFunctionality extends BankAccount {
         System.out.println("Age: "+getAge());
         System.out.println("Aadhaar number: "+getAdharNumber());
         System.out.println("Phone Number: "+getPhonenumber());
-        System.out.println("Account Number: "+getPhonenumber());
+        System.out.println("Account Number: "+getAccountNumber());
         System.out.println("Account Balance: "+getMinimumDeposite());
     }
 

@@ -8,7 +8,7 @@ public class UniversalBank {
         System.out.println("-------Welcome TO Universal Banks----");
         System.out.println("Do you Have any Bank Account?(y/n)");
         String choice=sc.nextLine();
-        if (choice.equals("y")){
+        if (choice.equals("n")){
             System.out.println("------Banks For Account Opening----");
             System.out.println("1.Bank Of India\n2. State Bank\n3. Axis Bank");
             int bankChoice= sc.nextInt();

@@ -26,6 +26,30 @@ public abstract class BankAccount {
         return accountHolderName;
     }
 
+    public void setAccountHolderName(String accountHolderName) {
+        this.accountHolderName = accountHolderName;
+    }
+
+    public void setAge(int age) {
+        Age = age;
+    }
+
+    public void setAdharNumber(long adharNumber) {
+        AdharNumber = adharNumber;
+    }
+
+    public void setPhonenumber(long phonenumber) {
+        Phonenumber = phonenumber;
+    }
+
+    public void setMinimumDeposite(int minimumDeposite) {
+        this.minimumDeposite = minimumDeposite;
+    }
+
+    public void setAccountNumber(String accountNumber) {
+        AccountNumber = accountNumber;
+    }
+
     public int getAge() {
         return Age;
     }

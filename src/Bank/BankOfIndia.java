@@ -43,6 +43,12 @@ public class BankOfIndia extends AccountFunctionality {
         minimumDeposite= sc.nextInt();
         AccountNumber=accountNumberCreate();
         BankOfIndia bankOfIndia=new BankOfIndia(accountHolderName,Age,AdharNumber,Phonenumber,minimumDeposite,AccountNumber);
+        setAccountHolderName(accountHolderName);
+        setAge(Age);
+        setPhonenumber(Phonenumber);
+        setAdharNumber(AdharNumber);
+        setMinimumDeposite(minimumDeposite);
+        setAccountNumber(AccountNumber);
         System.out.println("Account create sucessfully");
         System.out.println("-------Bank Of India-------");
         bankOfIndia.showAccount();

@@ -46,6 +46,12 @@ public class AxisBank extends AccountFunctionality {
         minimumDeposite= sc.nextInt();
         AccountNumber=accountNumberCreate();
         AxisBank axisBank=new AxisBank(accountHolderName,Age,AdharNumber,Phonenumber,minimumDeposite,AccountNumber);
+        setAccountHolderName(accountHolderName);
+        setAge(Age);
+        setPhonenumber(Phonenumber);
+        setAdharNumber(AdharNumber);
+        setMinimumDeposite(minimumDeposite);
+        setAccountNumber(AccountNumber);
         System.out.println("Account create sucessfully");
         System.out.println("-------State Bank -------");
         axisBank.showAccount();

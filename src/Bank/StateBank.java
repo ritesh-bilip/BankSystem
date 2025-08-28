@@ -46,6 +46,12 @@ public class StateBank extends AccountFunctionality{
         minimumDeposite= sc.nextInt();
         AccountNumber=accountNumberCreate();
         StateBank stateBank=new StateBank(accountHolderName,Age,AdharNumber,Phonenumber,minimumDeposite,AccountNumber);
+        setAccountHolderName(accountHolderName);
+        setAge(Age);
+        setPhonenumber(Phonenumber);
+        setAdharNumber(AdharNumber);
+        setMinimumDeposite(minimumDeposite);
+        setAccountNumber(AccountNumber);
         System.out.println("Account create sucessfully");
         System.out.println("-------State Bank -------");
         stateBank.showAccount();
